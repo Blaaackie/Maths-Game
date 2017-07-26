@@ -28,8 +28,7 @@
     return [NSString stringWithFormat:@"What is the sum of %ld and %ld? \n", (long)_randomNumber, (long)_randomNumber2];
 }
 
-    
-    
+
     
     
     

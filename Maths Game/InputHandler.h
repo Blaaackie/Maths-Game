@@ -10,6 +10,6 @@
 
 @interface InputHandler : NSObject
 
-
+-(NSString*) inputForPrompt:(NSString*)prompt;
 
 @end

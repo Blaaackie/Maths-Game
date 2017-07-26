@@ -10,13 +10,19 @@
 
 @implementation InputHandler
 
-// Method that takes a string (promptForUser) and returns a string
-
-// print the prompt
-// get input form user
-// convert to NSString
-
-// return String 
-
+-(NSString*) inputForPrompt:(NSString*)prompt {
+    
+    NSLog(@"\n%@", prompt);
+    
+    char str[255];
+    fgets(str, 255, stdin);
+    
+    NSString *userAnswer = [NSString stringWithUTF8String:str];
+    
+    NSString *trimmedString = [userAnswer stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    return trimmedString;
+    
+}
 
 @end

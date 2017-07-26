@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #include <stdlib.h>
 #import "AdditionQuestion.h"
+#import "InputHandler.h"
 
 
 //while loop in main
@@ -16,30 +17,27 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 
-        NSString *endProgram;
-        while (endProgram != @"quit") {
+        BOOL quizMe = YES;
+        
+        while (quizMe) {
         
             AdditionQuestion *question1 = [[AdditionQuestion alloc] init];
             
+            InputHandler *inputHandler = [[InputHandler alloc] init];
+            
             NSString *mathQuestion = [question1 question];
             
-            NSLog(@"\n%@", mathQuestion);
+            NSString *input = [inputHandler inputForPrompt:mathQuestion];
             
-            char str[255];
-            fgets(str, 255, stdin);
+            NSInteger userAnswerInt = [input integerValue];
             
-            NSString *userAnswer = [NSString stringWithUTF8String:str];
-            
-            NSLog(@"%@", userAnswer);
-            
-            NSInteger userAnswerInt = [userAnswer integerValue];
-            
-            if (userAnswerInt == (question1.randomNumber + question1.randomNumber2)) {
-                printf("Thats Right!");
-            }else {
-                printf("WRONG!!!");
-            }
-            endProgram = userAnswer;
+            if ([input isEqualToString:@"quit"]) {
+                break;
+            } else if (userAnswerInt == (question1.randomNumber + question1.randomNumber2)){
+                printf("Thats Right!\n");
+            } else {
+                printf("WRONG!!!\n");
+            };
         
         }
         return 0;
