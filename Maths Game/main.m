@@ -7,11 +7,24 @@
 //
 
 #import <Foundation/Foundation.h>
+#include <stdlib.h>
+#import "AdditionQuestion.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
-    }
-    return 0;
+
+        AdditionQuestion *question1 = [[AdditionQuestion alloc] init];
+        
+        NSString *mathQuestion = [question1 question];
+        
+        NSLog(@"\n%@", mathQuestion);
+        
+        char str[255];
+        fgets(str, 255, stdin);
+        
+        NSString *userAnswer = [NSString stringWithUTF8String:str];
+        
+        NSLog(@"%@", userAnswer);
+        
+    }    return 0;
 }

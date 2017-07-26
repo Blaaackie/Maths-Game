@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		685C31851F27E3FE006EFFE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 685C31841F27E3FE006EFFE4 /* main.m */; };
+		685C318D1F27E9CF006EFFE4 /* AdditionQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 685C318C1F27E9CF006EFFE4 /* AdditionQuestion.m */; };
+		685C31901F2830F1006EFFE4 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 685C318F1F2830F1006EFFE4 /* InputHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		685C31811F27E3FE006EFFE4 /* Maths Game */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Maths Game"; sourceTree = BUILT_PRODUCTS_DIR; };
 		685C31841F27E3FE006EFFE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		685C318B1F27E9CF006EFFE4 /* AdditionQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdditionQuestion.h; sourceTree = "<group>"; };
+		685C318C1F27E9CF006EFFE4 /* AdditionQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdditionQuestion.m; sourceTree = "<group>"; };
+		685C318E1F2830F1006EFFE4 /* InputHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputHandler.h; sourceTree = "<group>"; };
+		685C318F1F2830F1006EFFE4 /* InputHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				685C31841F27E3FE006EFFE4 /* main.m */,
+				685C318E1F2830F1006EFFE4 /* InputHandler.h */,
+				685C318F1F2830F1006EFFE4 /* InputHandler.m */,
+				685C318B1F27E9CF006EFFE4 /* AdditionQuestion.h */,
+				685C318C1F27E9CF006EFFE4 /* AdditionQuestion.m */,
 			);
 			path = "Maths Game";
 			sourceTree = "<group>";
@@ -120,6 +130,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				685C31851F27E3FE006EFFE4 /* main.m in Sources */,
+				685C31901F2830F1006EFFE4 /* InputHandler.m in Sources */,
+				685C318D1F27E9CF006EFFE4 /* AdditionQuestion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
