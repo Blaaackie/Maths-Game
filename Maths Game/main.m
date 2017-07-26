@@ -10,21 +10,38 @@
 #include <stdlib.h>
 #import "AdditionQuestion.h"
 
+
+//while loop in main
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 
-        AdditionQuestion *question1 = [[AdditionQuestion alloc] init];
+        NSString *endProgram;
+        while (endProgram != @"quit") {
         
-        NSString *mathQuestion = [question1 question];
+            AdditionQuestion *question1 = [[AdditionQuestion alloc] init];
+            
+            NSString *mathQuestion = [question1 question];
+            
+            NSLog(@"\n%@", mathQuestion);
+            
+            char str[255];
+            fgets(str, 255, stdin);
+            
+            NSString *userAnswer = [NSString stringWithUTF8String:str];
+            
+            NSLog(@"%@", userAnswer);
+            
+            NSInteger userAnswerInt = [userAnswer integerValue];
+            
+            if (userAnswerInt == (question1.randomNumber + question1.randomNumber2)) {
+                printf("Thats Right!");
+            }else {
+                printf("WRONG!!!");
+            }
+            endProgram = userAnswer;
         
-        NSLog(@"\n%@", mathQuestion);
-        
-        char str[255];
-        fgets(str, 255, stdin);
-        
-        NSString *userAnswer = [NSString stringWithUTF8String:str];
-        
-        NSLog(@"%@", userAnswer);
-        
-    }    return 0;
+        }
+        return 0;
+    }
 }

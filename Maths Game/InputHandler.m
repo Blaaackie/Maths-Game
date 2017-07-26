@@ -10,4 +10,13 @@
 
 @implementation InputHandler
 
+// Method that takes a string (promptForUser) and returns a string
+
+// print the prompt
+// get input form user
+// convert to NSString
+
+// return String 
+
+
 @end

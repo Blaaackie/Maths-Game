@@ -16,5 +16,5 @@
 -(NSString*) question;
 -(instancetype) init;
 
-
+-(int)someMethodThatTakesAString:(NSString *)takenString;
 @end
